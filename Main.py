@@ -42,7 +42,7 @@ while 1:
     while 1:
         print("happening")
         data = checkSnowdayStatus()
-        if (date - datetime.datetime.strptime(data[6], '%Y-%m-%d %H:%M:%S')) > datetime.timedelta(hours=0):
+        if (date - datetime.datetime.strptime(data[6], '%Y-%m-%d %H:%M:%S')) > datetime.timedelta(hours=12):
             print(data)
             client.sendSnowMessage(data)
             date = datetime.datetime.now()
